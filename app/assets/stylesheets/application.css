@@ -1154,7 +1154,7 @@ html.menu-opened body {
 -----------------------*/
 
 .home-banner {
-	background-image: image-url("/assets/img/banner.jpg");
+	background-image: url("/assets/img/banner.jpg");
     background-size:cover;
     height:100%;
     width:100%;
