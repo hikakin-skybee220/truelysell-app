@@ -58,3 +58,4 @@ gem 'unicorn', '4.8.3'
 gem 'jquery-rails'
 gem 'bootstrap-sass', '3.3.6'
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
+gem "aws-sdk-s3", require: false
