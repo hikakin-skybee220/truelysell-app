@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  def login_screen
+
+  end
+
   def create
     @user = User.new(email: params[:email],
     phone: params[:phone],
@@ -13,10 +18,11 @@ class UsersController < ApplicationController
 
   def login
     @user = User.find_by(email: params[:email])
+    @provider = Provider.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password])
       redirect_to("/users/dashboard")
     else
-      render("/home/top")
+      render("/users/login_screen")
     end
     
   end

@@ -1,4 +1,9 @@
 class HomeController < ApplicationController
-  def white
+  def create
+
+  end
+
+  def top
+    render("/home/top")
   end
 end
