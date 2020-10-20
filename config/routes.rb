@@ -8,8 +8,7 @@ Rails.application.routes.draw do
   get "providers/login_screen" => "providers#login_screen"
   get 'providers/dashboard'
   post "providers/create" => "providers#create"
-  post "users/create" => "users#create"
-  get "users/login_screen" => "users#login_screen"
+  post "users/create" => "users#create"  
   get 'users/dashboard' => "users#dashboard"
   root 'home#top'
   get 'home/top' => "home#top"

@@ -1,8 +1,5 @@
 class UsersController < ApplicationController
 
-  def login_screen
-
-  end
 
   def create
     @user = User.new(email: params[:email],
