@@ -968,7 +968,7 @@
 							<input type="password" class="form-control" name="password" placeholder="********">
 						</div>
 						<div class="text-right">
-							<a class="forgot-link" href="javascript:void(0);">すでにアカウントを持っていますか？</a>							
+							<a class="forgot-link have-account" href="javascript:void(0);">すでにアカウントを持っていますか？</a>							
 						</div>
 						<button class="btn btn-primary btn-block btn-lg login-btn" type="submit">サインアップ</button>
 						<div class="login-or">
@@ -1056,7 +1056,7 @@
 		$('.user-register').click();
 	})
 
-	$('.forgot-link').click(function(){
+	$('.have-account').click(function(){
 		$(this).parents('.modal-content').find('.close').click();
 		$('.header-login').click();
 	})
