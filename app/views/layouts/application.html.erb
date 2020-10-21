@@ -11,7 +11,8 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <%= stylesheet_link_tag params[:controller] if Rails.application.assets_manifest.assets["#{params[:controller]}.css"] %>
+    <%= stylesheet_link_tag params[:controller] if Rails.application.assets_manifest.assets["#{params[:controller]}.css"] %>    
+    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
   </head>
 
   <body>

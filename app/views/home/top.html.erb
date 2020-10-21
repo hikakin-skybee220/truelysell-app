@@ -4,7 +4,9 @@
 	<title>Truelysell | Template</title>
 
 	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/x-icon" href="/assets/img/favicon.ico">
 	<link rel="shortcut icon" href="assets/img/favicon.png">
+	<%= favicon_link_tag('/assets/img/favicon.ico') %>
 	
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"> 
 	
@@ -73,7 +75,7 @@
 							<a href="categories.html">カテゴリー</a>
 						</li>
 						<li class="has-submenu">
-							<a href="provider-dashboard.html">提供者</a>
+							<a href="provider-dashboard.html">クライアント管理</a>
 							<ul class="submenu">
 								<li><a href="provider-dashboard.html">ダッシュボード</a></li>
 								<li><a href="my-services.html">サービス</a></li>
@@ -87,7 +89,7 @@
 							</ul>
 						</li>
 						<li class="has-submenu">
-							<a href="user-dashboard.html">客</a>
+							<a href="user-dashboard.html">お取引内容</a>
 							<ul class="submenu">
 								<li><a href="user-dashboard.html">ダッシュボード</a></li>
 								<li><a href="user-bookings.html">予約</a></li>
@@ -98,12 +100,12 @@
 							</ul>
 						</li>
 						<li class="has-submenu active">
-							<a href="#">ページ <i class="fas fa-chevron-down"></i></a>
+							<a href="#">サービス一覧 <i class="fas fa-chevron-down"></i></a>
 							<ul class="submenu">
 								<li><a href="search.html">検索</a></li>
 								<li><a href="service-details.html">サービス詳細</a></li>
-								<li><a href="add-service.html">サービスを加える</a></li>
-								<li><a href="edit-service.html">サービスを編集する</a></li>
+								<li><a href="add-service.html">新規サービス登録</a></li>
+								<li><a href="edit-service.html">サービス編集</a></li>
 								<li><a href="chat.html">チャット</a></li>
 								<li><a href="notifications.html">通知</a></li>
 								<li class="active"><a href="about-us.html">会社概要</a></li>
@@ -118,16 +120,16 @@
 							<a href="/admin/login" target="_blank">管理者</a>
 						</li>
 						<li>
-							<a href="javascript:void(0);" data-toggle="modal" data-target="#provider-register">クライアントになる</a>
+							<a href="javascript:void(0);" data-toggle="modal" data-target="#provider-register">法人の方は、こちら</a>
 						</li>
 						<li>
-							<a href="javascript:void(0);" data-toggle="modal" data-target="#user-register" class="user-register">ユーザーになる</a>
+							<a href="javascript:void(0);" data-toggle="modal" data-target="#user-register" class="user-register">ユーザー新規登録</a>
 						</li>
 					</ul>
 				</div>
 				<ul class="nav header-navbar-rht">
 					<li class="nav-item">
-						<a class="nav-link header-login" href="javascript:void(0);" data-toggle="modal" data-target="#login_modal">ログイン</a>
+						<a class="nav-link header-login" href="javascript:void(0);" data-toggle="modal" data-target="#login_modal">会員の方はこちら</a>
 					</li>
 				</ul>
 			</nav>
@@ -905,11 +907,11 @@
 					<%=form_tag("/providers/create") do%>
 						<div class="form-group form-focus">
 							<label class="focus-label">名前</label>
-							<input type="text" class="form-control" name="email" placeholder="johndoe@exapmle.com">
+							<input type="text" class="form-control" name="name" placeholder="johndoe">
 						</div>
 						<div class="form-group form-focus">
-							<label class="focus-label">携帯電話番号</label>
-							<input type="text" class="form-control" name="phone" placeholder="986 452 1236">
+							<label class="focus-label">メールアドレス</label>
+							<input type="text" class="form-control" name="email" placeholder="johndoe@exapmle.com">
 						</div>
 						<div class="form-group form-focus">
 							<label class="focus-label">新規パスワード</label>
@@ -958,10 +960,10 @@
 					<%=form_tag("/users/create") do%>
 						<div class="form-group form-focus">
 							<label class="focus-label">名前</label>
-							<input type="text" class="form-control" name="email" placeholder="johndoe@exapmle.com">
+							<input type="text" class="form-control" name="name" placeholder="johndoe">
 						</div>
-						<div class="form-group form-focus">携帯電話番号</label>
-							<input type="text" class="form-control" name="phone" placeholder="986 452 1236">
+						<div class="form-group form-focus">メールアドレス</label>
+							<input type="text" class="form-control" name="email" placeholder="johndoe@exapmle.com">
 						</div>
 						<div class="form-group form-focus">
 							<label class="focus-label">新規パスワード</label>

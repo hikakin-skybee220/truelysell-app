@@ -5,8 +5,8 @@ class ProvidersController < ApplicationController
   end
 
   def create
-    @provider = Provider.new(email: params[:email],
-    phone: params[:phone],
+    @provider = Provider.new(name: params[:name],
+    email: params[:email],
     password: params[:password])
 
     if @provider.save
