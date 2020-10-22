@@ -8,4 +8,18 @@ class ApplicationController < ActionController::Base
         @current_provider = Provider.find_by(id: session[:provider_id])
     end
 
+    def authenticate_user
+        if @current_user == nil
+            flash[:notice] = "ログインが必要です"
+            redirect_to("/home/top")
+        end
+    end
+
+    def authenticate_provider
+        if @current_provider == nil
+            flash[:notice] = "ログインが必要です"
+            redirect_to("/providers/login_screen")
+        end
+    end
+
 end

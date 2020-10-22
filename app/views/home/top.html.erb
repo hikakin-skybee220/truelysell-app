@@ -52,9 +52,9 @@
 							<span></span>
 						</span>
 					</a>
-					<a href="index.html" class="navbar-brand logo">
-						<%= image_tag asset_path('logo.png', :alt => '画像') %>
-						<img src="/assets/img/logo.png" class="img-fluid" alt="Logo">
+					<a href="/home/top" class="navbar-brand logo">
+						<%= image_tag asset_path('logo.png'), class: "img-fluid", alt: "Logo" %>
+						<%#<img src="/assets/img/logo.png" class="img-fluid" alt="Logo">%>
 					</a>
 					<a href="index.html" class="navbar-brand logo-small">
 						<img src="/assets/img/logo-icon.png" class="img-fluid" alt="Logo">
@@ -69,6 +69,9 @@
 						<a id="menu_close" class="menu-close" href="javascript:void(0);"> <i class="fas fa-times"></i></a>
 					</div>
 					<ul class="main-nav">
+						<li>
+							<%=link_to("ログアウト", "/logout", {method: "post"}) %>
+						</li>
 						<li>
 							<a href="index.html">ホーム</a>
 						</li>

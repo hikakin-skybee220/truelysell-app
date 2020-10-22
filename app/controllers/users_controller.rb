@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
+  before_action :set_current_user
+  before_action :authenticate_user, {only:[:dashboard]}
 
+  def dashboard
+
+  end
 
   def create
     @user = User.new(name: params[:name],
@@ -25,4 +30,6 @@ class UsersController < ApplicationController
     end
     
   end
+
+  
 end
