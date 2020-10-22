@@ -69,9 +69,11 @@
 						<a id="menu_close" class="menu-close" href="javascript:void(0);"> <i class="fas fa-times"></i></a>
 					</div>
 					<ul class="main-nav">
-						<li>
-							<%=link_to("ログアウト", "/logout", {method: "post"}) %>
-						</li>
+						<% if @current_user or @current_provider %>
+							<li>
+								<%=link_to("ログアウト", "/logout", {method: "post"}) %>
+							</li>						  
+						<% end %>
 						<li>
 							<a href="index.html">ホーム</a>
 						</li>
