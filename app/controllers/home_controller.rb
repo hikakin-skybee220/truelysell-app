@@ -7,6 +7,7 @@ class HomeController < ApplicationController
   end
 
   def top
+    @image = Image.find_by(id:1)
     render("/home/top")
     session[:provider_id] = nil
   end
