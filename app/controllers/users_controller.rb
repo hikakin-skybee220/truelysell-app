@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
     if @user.save
       redirect_to("/users/dashboard")
+      session[:user_id] = @user.id
     else
       render("/home/top")
     end
@@ -18,8 +19,9 @@ class UsersController < ApplicationController
     @provider = Provider.find_by(email: params[:email])
     if @user && @user.authenticate(params[:password])
       redirect_to("/users/dashboard")
+      session[:user_id] = @user.id
     else
-      render("/users/login_screen")
+      render("/home/top")
     end
     
   end

@@ -53,7 +53,7 @@
 						</span>
 					</a>
 					<a href="index.html" class="navbar-brand logo">
-						<img src="/assets/img/logo.png" class="img-fluid" alt="Logo">
+						<img src="/assets/images/logo.png" class="img-fluid" alt="Logo">
 					</a>
 					<a href="index.html" class="navbar-brand logo-small">
 						<img src="/assets/img/logo-icon.png" class="img-fluid" alt="Logo">
@@ -74,34 +74,42 @@
 						<li>
 							<a href="categories.html">カテゴリー</a>
 						</li>
-						<li class="has-submenu">
-							<a href="provider-dashboard.html">クライアント管理</a>
-							<ul class="submenu">
-								<li><a href="provider-dashboard.html">ダッシュボード</a></li>
-								<li><a href="my-services.html">サービス</a></li>
-								<li><a href="provider-bookings.html">予約</a></li>
-								<li><a href="provider-settings.html">プロフィール設定</a></li>
-								<li><a href="provider-wallet.html">財布</a></li>
-								<li><a href="provider-subscription.html">サブスクリプション</a></li>
-								<li><a href="provider-availability.html">空き状況</a></li>
-								<li><a href="provider-reviews.html">レビュー</a></li>
-								<li><a href="provider-payment.html">支払い方法</a></li>
-							</ul>
-						</li>
-						<li class="has-submenu">
-							<a href="user-dashboard.html">お取引内容</a>
-							<ul class="submenu">
-								<li><a href="user-dashboard.html">ダッシュボード</a></li>
-								<li><a href="user-bookings.html">予約</a></li>
-								<li><a href="user-settings.html">プロフィール設定</a></li>
-								<li><a href="user-wallet.html">財布</a></li>
-								<li><a href="user-reviews.html">レビュー</a></li>
-								<li><a href="user-payment.html">支払い方法</a></li>
-							</ul>
-						</li>
+						<% if @current_user %>
+						<% else %>
+							<li class="has-submenu">
+								<a href="provider-dashboard.html">クライアント管理</a>
+								<ul class="submenu">
+									<li><a href="provider-dashboard.html">ダッシュボード</a></li>
+									<li><a href="my-services.html">サービス</a></li>
+									<li><a href="provider-bookings.html">予約</a></li>
+									<li><a href="provider-settings.html">プロフィール設定</a></li>
+									<li><a href="provider-wallet.html">財布</a></li>
+									<li><a href="provider-subscription.html">サブスクリプション</a></li>
+									<li><a href="provider-availability.html">空き状況</a></li>
+									<li><a href="provider-reviews.html">レビュー</a></li>
+									<li><a href="provider-payment.html">支払い方法</a></li>
+								</ul>
+							</li>
+							<li class="has-submenu">
+								<a href="user-dashboard.html">お取引内容</a>
+								<ul class="submenu">
+									<li><a href="user-dashboard.html">ダッシュボード</a></li>
+									<li><a href="user-bookings.html">予約</a></li>
+									<li><a href="user-settings.html">プロフィール設定</a></li>
+									<li><a href="user-wallet.html">財布</a></li>
+									<li><a href="user-reviews.html">レビュー</a></li>
+									<li><a href="user-payment.html">支払い方法</a></li>
+								</ul>
+							</li>						  
+						<% end %>
 						<li class="has-submenu active">
 							<a href="#">サービス一覧 <i class="fas fa-chevron-down"></i></a>
 							<ul class="submenu">
+							<% if @current_user %>
+								<li><a href="search.html">検索</a></li>
+								<li><a href="service-details.html">サービス詳細</a></li>
+								<li class="active"><a href="about-us.html">会社概要</a></li>
+							<% else %>
 								<li><a href="search.html">検索</a></li>
 								<li><a href="service-details.html">サービス詳細</a></li>
 								<li><a href="add-service.html">新規サービス登録</a></li>
@@ -113,24 +121,39 @@
 								<li><a href="faq.html">よくある質問</a></li>
 								<li><a href="#">利用規約</a></li>
 								<li><a href="#">プライバシーポリシー</a></li>
+							<% end %>
 							</ul>
 						</li>
-						
-						<li>
-							<a href="/admin/login" target="_blank">管理者</a>
-						</li>
-						<li>
-							<a href="javascript:void(0);" data-toggle="modal" data-target="#provider-register">法人の方は、こちら</a>
-						</li>
+						<% if @current_user or @current_provider %>
+						<% else %>
+							<li>
+								<a href="/admin/login" target="_blank">管理者</a>
+							</li>						  
+						<% end %>
+						<% if @current_provider %>
+							<li>
+								<a href="javascript:void(0);" data-toggle="modal" data-target="#provider-register">ログイン中</a>
+							</li>
+						<% else %>						
+							<li>
+								<a href="javascript:void(0);" data-toggle="modal" data-target="#provider-register">法人の方は、こちら</a>
+							</li>
+						<% end %>
 						<li>
 							<a href="javascript:void(0);" data-toggle="modal" data-target="#user-register" class="user-register">ユーザー新規登録</a>
 						</li>
 					</ul>
 				</div>
 				<ul class="nav header-navbar-rht">
-					<li class="nav-item">
-						<a class="nav-link header-login" href="javascript:void(0);" data-toggle="modal" data-target="#login_modal">会員の方はこちら</a>
-					</li>
+					<% if @current_user %>
+						<li class="nav-item">
+							<a class="nav-link header-login" href="javascript:void(0);" data-toggle="modal" data-target="#login_modal">ログイン中</a>
+						</li>
+					<% else %>
+						<li class="nav-item">
+							<a class="nav-link header-login" href="javascript:void(0);" data-toggle="modal" data-target="#login_modal">会員の方はこちら</a>
+						</li>
+					<% end %>
 				</ul>
 			</nav>
             

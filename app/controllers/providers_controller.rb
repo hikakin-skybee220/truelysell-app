@@ -11,6 +11,7 @@ class ProvidersController < ApplicationController
 
     if @provider.save
       redirect_to("/providers/dashboard")
+      session[:provider_id] = @provider.id
     else
       render("/home/top")
     end
@@ -20,6 +21,7 @@ class ProvidersController < ApplicationController
     @provider = Provider.find_by(email: params[:email])
     if @provider && @provider.authenticate(params[:password])
       redirect_to("/providers/dashboard")
+      session[:provider_id] = @provider.id
     else
       render("/providers/login_screen")
     end
