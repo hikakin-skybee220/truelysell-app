@@ -23,6 +23,14 @@
     color: orange;
     font-size: 18px;
 }
+.form-error{
+    color: red;
+    margin: 10px 0;
+}
+.form-focus small{
+	float: right;
+	padding-top: 5px;
+}
 
 body {
 	background-color: #fefefe;

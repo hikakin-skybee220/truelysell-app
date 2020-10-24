@@ -7,8 +7,10 @@ class HomeController < ApplicationController
   end
 
   def top
+    @provider = Provider.new
+    @user = User.new
     @image = Image.find_by(id:1)
-    render("/home/top")        
+    render("/home/top")   
   end
 
   def logout

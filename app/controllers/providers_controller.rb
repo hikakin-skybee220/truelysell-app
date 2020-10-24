@@ -3,7 +3,7 @@ class ProvidersController < ApplicationController
   before_action :authenticate_provider, {only:[:dashboard]}
 
   def login_screen
-
+    
   end
 
   def dashboard
@@ -11,6 +11,7 @@ class ProvidersController < ApplicationController
   end
 
   def create
+    @user = User.new
     @provider = Provider.new(name: params[:name],
     email: params[:email],
     password: params[:password])
@@ -23,6 +24,8 @@ class ProvidersController < ApplicationController
       redirect_to("/providers/dashboard")
       session[:provider_id] = @provider.id
     else
+      @provider = Provider.new
+      flash[:notice] = "登録に失敗しました。「法人の方は、こちら」を押してください。"
       render("/home/top")
     end
   end
@@ -37,10 +40,10 @@ class ProvidersController < ApplicationController
       redirect_to("/providers/dashboard")
       session[:provider_id] = @provider.id
     else
+      @error_message = "メールアドレスまたはパスワードが間違っています"
       render("/providers/login_screen")
     end
   end
 
-  
 
 end

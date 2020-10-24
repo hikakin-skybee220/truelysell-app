@@ -1,0 +1,9 @@
+<h1>User#account_activation</h1>
+
+<p>
+  <%= @greeting %>, find me in app/views/user_mailer/account_activation.html.erb
+</p>
+  こんにちは、<%= @user.name %>
+  下記のリンクをクリックして、アカウントを有効化してください。
+  <%= link_to "有効化する", edit_account_activaation_url(@user.activation_token,
+                                                       email: @user.email) %>

@@ -59,3 +59,5 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '3.3.6'
 gem 'bcrypt', '~> 3.1', '>= 3.1.12'
 gem "aws-sdk-s3", require: false
+gem 'rails-i18n'
+gem 'faker','1.4.2'
