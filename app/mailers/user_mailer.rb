@@ -20,12 +20,13 @@ class UserMailer < ApplicationMailer
   #
   def password_reset(user)
     @greeting = "Hi"
-    @user = User.find(user.id)
+    @user = User.find_by(id:user.id)
     # @url  = edit_password_reset_url(@user.reset_password_token)
     # mail(:to => user.email,
     #      :subject => "Reset your password")
-
-    mail to: user.email, subject: "Reset your password"
+    @url = "https://truelysell-app.herokuapp.com/#{@user.id}/reset"
+    # @url = edit_password_reset_url/@user.id/reset    
+    mail(to: @user.email, subject: 'パスワードの再設定')
   end
 
   def reset_password_email(user)
