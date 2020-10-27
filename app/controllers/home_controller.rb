@@ -10,20 +10,20 @@ class HomeController < ApplicationController
     @provider = Provider.new
     @user = User.new
     @image = Image.find_by(id:1)
-    render("/home/top")   
+    render("/")   
   end
 
   def logout
     session[:provider_id] = nil
     session[:user_id] = nil
     flash[:notice] = "ログアウトしました"
-    redirect_to("/home/top")
+    redirect_to("/")
   end
 
   def mail
     TestMailer.testmail(params[:str]).deliver_later  #メーラに作成したメソッドを呼び出す。
     flash[:notice] = "メール送信完了" 
-    redirect_to "/home/top"
+    redirect_to "/"
   end
 
 end

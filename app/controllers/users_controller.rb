@@ -34,7 +34,7 @@ class UsersController < ApplicationController
       #   redirect_to root_url
     else
       flash[:notice] = "登録に失敗しました。「ユーザー新規登録」を押してください。"
-      render("/home/top")
+      render("/")
     end
   end
 
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
       @user = User.new
       @error_message = "メールアドレスまたはパスワードが間違っています"
       flash[:notice] = "ログインに失敗しました。「会員の方はこちら」を押してください。"
-      render("/home/top")
+      render("/")
     end
   end
 
@@ -61,7 +61,7 @@ class UsersController < ApplicationController
     @user = User.find_by(email: params[:email])
     if @user
       UserMailer.password_reset(@user).deliver
-      redirect_to('/home/top')
+      redirect_to('/')
     else
       render('/users/password_forgot')
     end

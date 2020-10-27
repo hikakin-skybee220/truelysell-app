@@ -26,7 +26,7 @@ class ProvidersController < ApplicationController
     else
       @provider = Provider.new
       flash[:notice] = "登録に失敗しました。「法人の方は、こちら」を押してください。"
-      render("/home/top")
+      render("/")
     end
   end
 
