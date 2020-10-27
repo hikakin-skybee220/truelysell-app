@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root '/'
   get 'password_resets/new'
   get 'password_resets/edit'
   post "/logout" => "home#logout"
@@ -15,7 +16,6 @@ Rails.application.routes.draw do
   post "users/login" =>"users#login"
   post "users/create" => "users#create"  
   get 'users/dashboard' => "users#dashboard"
-  root '/'
   get '/home/top' => "home#top"
   post "/mail" => "home#mail"
 
