@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root '/'
+  root 'home#top'
   get 'password_resets/new'
   get 'password_resets/edit'
   post "/logout" => "home#logout"
