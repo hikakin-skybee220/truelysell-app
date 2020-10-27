@@ -10,7 +10,7 @@ class HomeController < ApplicationController
     @provider = Provider.new
     @user = User.new
     @image = Image.find_by(id:1)
-    render("/")   
+    render("/home/top")   
   end
 
   def logout
