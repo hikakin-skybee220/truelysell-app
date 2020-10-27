@@ -1,8 +1,8 @@
 class TestMailer < ApplicationMailer
-    default from: 'default@example.com'
+    default from: 'info@truelysell-app.herokuapp.com'
 
-  def testmail(str)
-    @str = str
+  def testmail
+    
     mail(to: "hikarureihika@gmail.com", subject: "テストやでー")
   end
 end
