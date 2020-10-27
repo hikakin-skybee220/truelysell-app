@@ -3,6 +3,6 @@ class TestMailer < ApplicationMailer
 
   def testmail(str)
     @str = str
-    mail(to: "hikaru_iphone11pro@icloud.com", subject: "テストやでー")
+    mail(to: "hikarureihika@gmail.com", subject: "テストやでー")
   end
 end
