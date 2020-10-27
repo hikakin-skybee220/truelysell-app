@@ -15,8 +15,8 @@ Rails.application.routes.draw do
   post "users/login" =>"users#login"
   post "users/create" => "users#create"  
   get 'users/dashboard' => "users#dashboard"
-  root 'home#top'
-  get '/' => "home#top"
+  root '/'
+  get '/home/top' => "home#top"
   post "/mail" => "home#mail"
 
   # get 'edit_account_activation_url' => "account_activations#edit"
