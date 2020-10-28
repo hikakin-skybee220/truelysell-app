@@ -115,8 +115,8 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'truelysell-app.herokuapp.com' }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.smtp_settings = {
-  :user_name => ENV['SENDGRID_USERNAME'],
-  :password => ENV['SENDGRID_PASSWORD'],
+  :user_name => ENV['app189082228@heroku.com'],
+  :password => ENV['3pq7f8cm8990'],
   :domain => 'herokuapp.com',
   :address => 'smtp.sendgrid.net',
   :port => 587,
