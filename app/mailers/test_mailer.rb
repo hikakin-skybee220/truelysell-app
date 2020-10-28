@@ -1,5 +1,5 @@
 class TestMailer < ApplicationMailer
-    default from: 'info@herokuapp.com'
+    default from: 'sgysl2vm@kke.com'
 
   def testmail
     

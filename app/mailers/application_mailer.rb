@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'info@truelysell-app.herokuapp.com'
+  default from: 'sgysl2vm@kke.com'
   layout 'mailer'
 end
