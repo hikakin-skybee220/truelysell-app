@@ -11,6 +11,7 @@ class HomeController < ApplicationController
     @user = User.new
     @image = Image.find_by(id:1)
     render("/home/top")   
+    session[:user_id] = nil
   end
 
   def logout
