@@ -42,6 +42,11 @@ class UsersController < ApplicationController
     @provider = Provider.new
     @user = User.find_by(email: params[:email])    
     if @user && @user.authenticate(params[:password])
+      if session[:user_id] or session[:provider_id] or session[:admin_id]
+        session[:user_id] == nil
+        session[:provider_id] == nil
+        session[:admin_id] == nil
+      end
       redirect_to("/users/dashboard")
       session[:user_id] = @user.id
     else

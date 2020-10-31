@@ -1,0 +1,887 @@
+	<div class="main-wrapper">
+	
+		<!-- Header -->
+		<header class="header">
+			<nav class="navbar navbar-expand-lg header-nav">
+				<div class="navbar-header">
+					<a id="mobile_btn" href="javascript:void(0);">
+						<span class="bar-icon">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+					</a>
+					<a href="/home/top" class="navbar-brand logo">
+						<%= image_tag asset_path('logo.png'), class: "img-fluid", alt: "Logo" %>
+					</a>
+					<a href="index.html" class="navbar-brand logo-small">
+						<img src="/assets/img/logo-icon.png" class="img-fluid" alt="Logo">
+					</a>
+				</div>
+				<div class="main-menu-wrapper">
+					<div class="menu-header">
+						<a href="index.html" class="menu-logo">
+							<img src="/assets/img/logo.png" class="img-fluid" alt="Logo">
+						</a>
+						<a id="menu_close" class="menu-close" href="javascript:void(0);"> <i class="fas fa-times"></i></a>
+					</div>
+					<ul class="main-nav">
+						<li>
+							<a href="index.html">ホーム</a>
+						</li>
+						<li>
+							<a href="categories.html">カテゴリー</a>
+						</li>
+						<li class="has-submenu">
+							<a href="provider-dashboard.html">提供者</a>
+							<ul class="submenu">
+								<li><a href="/providers/dashboard">ダッシュボード</a></li>
+								<li><a href="/providers/my-services">サービス</a></li>
+								<li><a href="provider-bookings.html">予約</a></li>
+								<li><a href="provider-settings.html">プロフィール設定</a></li>
+								<li><a href="provider-wallet.html">財布</a></li>
+								<li><a href="provider-subscription.html">サブスクリプション</a></li>
+								<li><a href="provider-availability.html">空き状況</a></li>
+								<li><a href="provider-reviews.html">レビュー</a></li>
+								<li><a href="provider-payment.html">支払い方法</a></li>
+							</ul>
+						</li>
+						<li class="has-submenu">
+							<a href="user-dashboard.html">客</a>
+							<ul class="submenu">
+								<li><a href="user-dashboard.html">ダッシュボード</a></li>
+								<li><a href="user-bookings.html">予約</a></li>
+								<li><a href="user-settings.html">プロフィール設定</a></li>
+								<li><a href="user-wallet.html">財布</a></li>
+								<li><a href="user-reviews.html">レビュー</a></li>
+								<li><a href="user-payment.html">支払い方法</a></li>
+							</ul>
+						</li>
+						<li class="has-submenu active">
+							<a href="#">ページ <i class="fas fa-chevron-down"></i></a>
+							<ul class="submenu">
+								<li><a href="search.html">検索</a></li>
+								<li><a href="service-details.html">サービス詳細</a></li>
+								<li><a href="add-service.html">サービスを加える</a></li>
+								<li><a href="edit-service.html">サービスを編集する</a></li>
+								<li><a href="chat.html">チャット</a></li>
+								<li><a href="notifications.html">通知</a></li>
+								<li class="active"><a href="about-us.html">会社概要</a></li>
+								<li><a href="contact-us.html">お問い合わせ</a></li>
+								<li><a href="faq.html">よくある質問</a></li>
+								<li><a href="#">利用規約</a></li>
+								<li><a href="#">プライバシーポリシー</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="admin/index.html" target="_blank">管理者</a>
+						</li>
+					</ul>
+				</div>
+
+				<ul class="nav header-navbar-rht">
+
+					<li class="nav-item desc-list">
+						<a href="/providers/add_service" class="nav-link header-login">
+							<i class="fas fa-plus-circle mr-1"></i> <span>サービスを投稿する</span>
+						</a>
+					</li>
+
+					<!-- Notifications -->
+					<li class="nav-item dropdown logged-item">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+							<i class="fas fa-bell"></i> <span class="badge badge-pill bg-yellow">1</span>
+						</a>
+						<div class="dropdown-menu notify-blk dropdown-menu-right notifications">
+							<div class="topnav-dropdown-header">
+								<span class="notification-title">通知</span>
+								<a href="javascript:void(0)" class="clear-noti">全て削除 </a>
+							</div>
+							<div class="noti-content">
+								<ul class="notification-list">
+									<li class="notification-message">
+										<a href="notifications.html">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="/assets/img/customer/user-01.jpg">
+												</span>
+												<div class="media-body">
+													<p class="noti-details"> <span class="noti-title">Jeffrey Akridge があなたのサービスを予約しました。</span></p>
+													<p class="noti-time"><span class="notification-time">今日 22:04</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="notifications.html">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="/assets/img/customer/user-02.jpg">
+												</span>
+												<div class="media-body">
+													<p class="noti-details"> <span class="noti-title">Nancy Olson があなたのサービスを予約しました。</span></p>
+													<p class="noti-time"><span class="notification-time">今日 21:45</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="notifications.html">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="/assets/img/customer/user-03.jpg">
+												</span>
+												<div class="media-body">
+													<p class="noti-details"> <span class="noti-title">Ramona Kingsley があなたのサービスを予約しました。</span></p>
+													<p class="noti-time"><span class="notification-time">昨日 8:17</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="notifications.html">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="/assets/img/customer/user-04.jpg">
+												</span>
+												<div class="media-body">
+													<p class="noti-details"> <span class="noti-title">Ricardo Lung があなたのサービスを予約しました。</span></p>
+													<p class="noti-time"><span class="notification-time">昨日 6:20</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+									<li class="notification-message">
+										<a href="notifications.html">
+											<div class="media">
+												<span class="avatar avatar-sm">
+													<img class="avatar-img rounded-circle" alt="User Image" src="/assets/img/customer/user-05.jpg">
+												</span>
+												<div class="media-body">
+													<p class="noti-details"> <span class="noti-title">Annette Silva があなたのサービスを予約しました。</span></p>
+													<p class="noti-time"><span class="notification-time">2020 9/17 22:04</span></p>
+												</div>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="topnav-dropdown-footer">
+								<a href="notifications.html">全ての通知を見る</a>
+							</div>
+						</div>
+					</li>
+					<!-- /Notifications -->
+
+					<!-- chat -->
+					<li class="nav-item logged-item">
+						<a href="chat.html" class="nav-link">
+							<i class="fa fa-comments" aria-hidden="true"></i>
+						</a>
+					</li>
+					<!-- /chat -->
+					
+					<!-- User Menu -->
+					<li class="nav-item dropdown has-arrow logged-item">
+						<a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false">
+							<span class="user-img">
+								<img class="rounded-circle" src="/assets/img/provider/provider-01.jpg" alt="" width="31">
+							</span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-right">
+							<div class="user-header">
+								<div class="avatar avatar-sm">
+									<img class="avatar-img rounded-circle" src="/assets/img/provider/provider-01.jpg" alt="">
+								</div>
+								<div class="user-text">
+									<h6 class="text-truncate">Thomas</h6>
+									<p class="text-muted mb-0">提供者</p>
+								</div>
+							</div>
+							<a class="dropdown-item" href="/providers/dashboard">ダッシュボード</a>
+							<a class="dropdown-item" href="/providers/my_services">サービス</a>
+							<a class="dropdown-item" href="provider-bookings.html">予約リスト</a>
+							<a class="dropdown-item" href="provider-settings.html">プロフィール設定</a>
+							<a class="dropdown-item" href="provider-wallet.html">財布</a>
+							<a class="dropdown-item" href="provider-subscription.html">サブスクリプション</a>
+							<a class="dropdown-item" href="provider-availability.html">空き状況</a>
+							<a class="dropdown-item" href="chat.html">チャット</a>
+							<a class="dropdown-item" href="index.html">ログアウト</a>
+						</div>
+					</li>
+					<!-- /User Menu -->
+
+				</ul>
+
+			</nav>
+		</header>
+		<!-- /Header -->
+		
+		<div class="content">
+			<div class="container">
+				<div class="row">
+					<div class="col-xl-3 col-md-4 theiaStickySidebar">
+						<div class="mb-4">
+							<div class="d-sm-flex flex-row flex-wrap text-center text-sm-left align-items-center">
+								<img alt="profile image" src="/assets/img/provider/provider-01.jpg" class="avatar-lg rounded-circle">
+								<div class="ml-sm-3 ml-md-0 ml-lg-3 mt-2 mt-sm-0 mt-md-2 mt-lg-0">
+									<h6 class="mb-0">Thomas Herzberg</h6>
+									<p class="text-muted mb-0">2020 4月からメンバー</p>
+								</div>
+							</div>
+						</div>
+						<div class="widget settings-menu">
+							<ul>
+								<li class="nav-item">
+									<a href="/providers/dashboard" class="nav-link">
+										<i class="fas fa-chart-line"></i> <span>ダッシュボード</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="/providers/my_services" class="nav-link active">
+										<i class="far fa-address-book"></i> <span>サービス</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="provider-bookings.html" class="nav-link">
+										<i class="far fa-calendar-check"></i> <span>予約リスト</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="provider-settings.html" class="nav-link">
+										<i class="far fa-user"></i> <span>プロフィール設定</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="provider-wallet.html" class="nav-link">
+										<i class="far fa-money-bill-alt"></i> <span>財布</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="provider-subscription.html" class="nav-link">
+										<i class="far fa-calendar-alt"></i> <span>サブスクリプション</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="provider-availability.html" class="nav-link">
+										<i class="far fa-clock"></i> <span>空き状況</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="provider-reviews.html" class="nav-link">
+										<i class="far fa-star"></i> <span>レビュー</span>
+									</a>
+								</li>
+								<li class="nav-item">
+									<a href="provider-payment.html" class="nav-link">
+										<i class="fas fa-hashtag"></i> <span>支払い方法</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-xl-9 col-md-8">
+						<h4 class="widget-title">サービス</h4>
+						<ul class="nav nav-tabs menu-tabs">
+							<li class="nav-item active">
+								<a class="nav-link" href="my-services.html">活動中のサービス</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="my-services-inactive.html">活動休止中のサービス</a>
+							</li>
+						</ul>
+						<div class="row">
+						
+							<div class="col-lg-4 col-md-6">
+								<div class="service-widget">
+									<div class="service-img">
+										<a href="service-details.html">
+											<img class="img-fluid serv-img" alt="Service Image" src="/assets/img/services/service-01.jpg">
+										</a>
+										<div class="item-info">
+											<div class="service-user">
+												<a href="javascript:void(0);">
+													<img src="/assets/img/provider/provider-01.jpg" alt="">
+												</a>
+												<span class="service-price">$25</span>
+											</div>
+											<div class="cate-list">
+												<a class="bg-yellow" href="service-details.html">ガラス</a>
+											</div>
+										</div>
+									</div>
+									<div class="service-content">
+										<h3 class="title text-truncate">
+											<a href="service-details.html">強化ガラス設置サービス</a>
+										</h3>
+										<div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<span class="d-inline-block average-rating">(4.3)</span>
+										</div>
+										<div class="user-info">
+											<div class="service-action">
+												<div class="row">
+													<div class="col">
+														<a href="edit-service.html" class="text-success"><i class="far fa-edit"></i> 編集</a>
+													</div>
+													<div class="col text-right">
+														<a href="javascript:void(0);" class="text-danger" data-toggle="modal" data-target="#deleteNotConfirmModal"><i class="far fa-trash-alt"></i> 活動停止</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6">
+								<div class="service-widget">
+									<div class="service-img">
+										<a href="service-details.html">
+											<img class="img-fluid serv-img" alt="Service Image" src="/assets/img/services/service-02.jpg">
+										</a>
+										<div class="item-info">
+											<div class="service-user">
+												<a href="javascript:void(0);">
+													<img src="/assets/img/provider/provider-01.jpg" alt="">
+												</a>	<span class="service-price">$50</span>
+											</div>
+											<div class="cate-list">	<a class="bg-yellow" href="service-details.html">自動車</a>
+											</div>
+										</div>
+									</div>
+									<div class="service-content">
+										<h3 class="title">
+											<a href="service-details.html">車修理サービス</a>
+										</h3>
+										<div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<span class="d-inline-block average-rating">(5)</span>
+										</div>
+										<div class="user-info">
+											<div class="service-action">
+												<div class="row">
+													<div class="col">
+														<a href="edit-service.html" class="text-success"><i class="far fa-edit"></i> 編集</a>
+													</div>
+													<div class="col text-right">
+														<a href="javascript:void(0);" class="si-delete-service text-danger" data-id="148"><i class="fas fa-info-circle"></i> 活動停止</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6">
+								<div class="service-widget">
+									<div class="service-img">
+										<a href="service-details.html">
+											<img class="img-fluid serv-img" alt="Service Image" src="/assets/img/services/service-03.jpg">
+										</a>
+										<div class="item-info">
+											<div class="service-user">
+												<a href="javascript:void(0);">
+													<img src="/assets/img/provider/provider-01.jpg" alt="">
+												</a>
+												<span class="service-price">$45</span>
+											</div>
+											<div class="cate-list">
+												<a class="bg-yellow" href="service-details.html">電気</a>
+											</div>
+										</div>
+									</div>
+									<div class="service-content">
+										<h3 class="title">
+											<a href="service-details.html">電気パネル修理サービス</a>
+										</h3>
+										<div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(4.5)</span>
+										</div>
+										<div class="user-info">
+											<div class="service-action">
+												<div class="row">
+													<div class="col"><a href="edit-service.html" class="text-success"><i class="far fa-edit"></i> 編集</a>
+													</div>
+													<div class="col text-right"><a href="javascript:void(0);" class="si-delete-service text-danger" data-id="147"><i class="fas fa-info-circle"></i> 活動停止</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6">
+								<div class="service-widget">
+									<div class="service-img">
+										<a href="service-details.html">
+											<img class="img-fluid serv-img" alt="Service Image" src="/assets/img/services/service-04.jpg">
+										</a>
+										<div class="item-info">
+											<div class="service-user">
+												<a href="javascript:void(0);">
+													<img src="/assets/img/provider/provider-01.jpg" alt="">
+												</a>
+												<span class="service-price">$14</span>
+											</div>
+											<div class="cate-list">
+												<a class="bg-yellow" href="service-details.html">洗車</a>
+											</div>
+										</div>
+									</div>
+									<div class="service-content">
+										<h3 class="title">
+											<a href="service-details.html">スチーム洗車</a>
+										</h3>
+										<div class="rating">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(0)</span>
+										</div>
+										<div class="user-info">
+											<div class="service-action">
+												<div class="row">
+													<div class="col">
+														<a href="edit-service.html" class="text-success"><i class="far fa-edit"></i> 編集</a>
+													</div>
+													<div class="col text-right">
+														<a href="javascript:void(0);" class="text-danger" data-toggle="modal" data-target="#deleteNotConfirmModal"><i class="far fa-trash-alt"></i> 活動停止</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6">
+								<div class="service-widget">
+									<div class="service-img">
+										<a href="service-details.html">
+											<img class="img-fluid serv-img" alt="Service Image" src="/assets/img/services/service-05.jpg">
+										</a>
+										<div class="item-info">
+											<div class="service-user">
+												<a href="javascript:void(0);">
+													<img src="/assets/img/provider/provider-01.jpg" alt="">
+												</a>
+												<span class="service-price">$100</span>
+											</div>
+											<div class="cate-list">
+												<a class="bg-yellow" href="service-details.html">掃除</a>
+											</div>
+										</div>
+									</div>
+									<div class="service-content">
+										<h3 class="title">
+											<a href="service-details.html">ハウスクリーニングサービス</a>
+										</h3>
+										<div class="rating">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(0)</span>
+										</div>
+										<div class="user-info">
+											<div class="service-action">
+												<div class="row">
+													<div class="col">
+														<a href="edit-service.html" class="text-success"><i class="far fa-edit"></i> 編集</a>
+													</div>
+													<div class="col text-right">
+														<a href="javascript:void(0);" class="text-danger" data-toggle="modal" data-target="#deleteNotConfirmModal"><i class="far fa-trash-alt"></i> 活動停止</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6">
+								<div class="service-widget">
+									<div class="service-img">
+										<a href="service-details.html">
+											<img class="img-fluid serv-img" alt="Service Image" src="/assets/img/services/service-06.jpg">
+										</a>
+										<div class="item-info">
+											<div class="service-user">
+												<a href="javascript:void(0);">
+													<img src="/assets/img/provider/provider-01.jpg" alt="">
+												</a>	<span class="service-price">$80</span>
+											</div>
+											<div class="cate-list">	<a class="bg-yellow" href="service-details.html">コンピュータ</a>
+											</div>
+										</div>
+									</div>
+									<div class="service-content">
+										<h3 class="title">
+											<a href="service-details.html">AMCサービス(コンピュータとサーバー)</a>
+										</h3>
+										<div class="rating">
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(0)</span>
+										</div>
+										<div class="user-info">
+											<div class="service-action">
+												<div class="row">
+													<div class="col">
+														<a href="edit-service.html" class="text-success"><i class="far fa-edit"></i> 編集</a>
+													</div>
+													<div class="col text-right">
+														<a href="javascript:void(0);" class="text-danger" data-toggle="modal" data-target="#deleteNotConfirmModal"><i class="far fa-trash-alt"></i> 活動停止</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6">
+								<div class="service-widget">
+									<div class="service-img">
+										<a href="service-details.html">
+											<img class="img-fluid serv-img" alt="Service Image" src="/assets/img/services/service-07.jpg">
+										</a>
+										<div class="item-info">
+											<div class="service-user">
+												<a href="javascript:void(0);">
+													<img src="/assets/img/provider/provider-01.jpg" alt="">
+												</a>
+												<span class="service-price">$5</span>
+											</div>
+											<div class="cate-list">
+												<a class="bg-yellow" href="service-details.html">内装</a>
+											</div>
+										</div>
+									</div>
+									<div class="service-content">
+										<h3 class="title">
+											<a href="service-details.html">内装デザイン</a>
+										</h3>
+										<div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(4)</span>
+										</div>
+										<div class="user-info">
+											<div class="service-action">
+												<div class="row">
+													<div class="col">
+														<a href="edit-service.html" class="text-success"><i class="far fa-edit"></i> 編集</a>
+													</div>
+													<div class="col text-right">
+														<a href="javascript:void(0);" class="si-delete-service text-danger" data-id="135"><i class="fas fa-info-circle"></i> 活動停止</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6">
+								<div class="service-widget">
+									<div class="service-img">
+										<a href="service-details.html">
+											<img class="img-fluid serv-img" alt="Service Image" src="/assets/img/services/service-08.jpg">
+										</a>
+										<div class="item-info">
+											<div class="service-user">
+												<a href="javascript:void(0);">
+													<img src="/assets/img/provider/provider-01.jpg" alt="">
+												</a>
+												<span class="service-price">$75</span>
+											</div>
+											<div class="cate-list">
+												<a class="bg-yellow" href="service-details.html">建設</a>
+											</div>
+										</div>
+									</div>
+									<div class="service-content">
+										<h3 class="title">
+											<a href="service-details.html">ビル建設サービス</a>
+										</h3>
+										<div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(4)</span>
+										</div>
+										<div class="user-info">
+											<div class="service-action">
+												<div class="row">
+													<div class="col">
+														<a href="edit-service.html" class="text-success"><i class="far fa-edit"></i> 編集</a>
+													</div>
+													<div class="col text-right">
+														<a href="javascript:void(0);" class="si-delete-service text-danger" data-id="134"><i class="fas fa-info-circle"></i> 活動停止</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6">
+								<div class="service-widget">
+									<div class="service-img">
+										<a href="service-details.html">
+											<img class="img-fluid serv-img" alt="Service Image" src="/assets/img/services/service-09.jpg">
+										</a>
+										<div class="item-info">
+											<div class="service-user">
+												<a href="javascript:void(0);">
+													<img src="/assets/img/provider/provider-01.jpg" alt="">
+												</a>	<span class="service-price">$500</span>
+											</div>
+											<div class="cate-list">	<a class="bg-yellow" href="service-details.html">塗装</a>
+											</div>
+										</div>
+									</div>
+									<div class="service-content">
+										<h3 class="title">
+											<a href="service-details.html">商業塗装サービス</a>
+										</h3>
+										<div class="rating">
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star filled"></i>
+											<i class="fas fa-star"></i>
+											<i class="fas fa-star"></i>
+											<span class="d-inline-block average-rating">(3)</span>
+										</div>
+										<div class="user-info">
+											<div class="service-action">
+												<div class="row">
+													<div class="col">
+														<a href="edit-service.html" class="text-success"><i class="far fa-edit"></i> 編集</a>
+													</div>
+													<div class="col text-right">
+														<a href="javascript:void(0);" class="text-danger" data-toggle="modal" data-target="#deleteNotConfirmModal"><i class="far fa-trash-alt"></i> 活動停止</a>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> 
+							
+							<!-- Pagination Links --> 
+							<div class="pagination">
+								<ul>
+									<li class="active">
+										<a href="javascript:void(0);">1</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">2</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">3</a>
+									</li>
+									<li>
+										<a href="javascript:void(0);">4</a>
+									</li>
+									<li class="arrow">
+										<a href="javascript:void(0);"><i class="fas fa-angle-right"></i></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="deleteConfirmModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header"> 
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">	<span aria-hidden="true">&times;</span>
+						</button>
+					</div> 
+					<div class="modal-footer">	<a href="javascript:;" class="btn btn-success si_accept_confirm">はい</a>
+						<button type="button" class="btn btn-danger si_accept_cancel" data-dismiss="modal">キャンセル</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="modal fade" id="deleteNotConfirmModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="acc_title">活動休止にしますか？</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">	<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<p>サービスは予約され、進行中です。</p>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-danger si_accept_cancel" data-dismiss="modal">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>﻿
+		
+		<!-- Footer -->
+		<footer class="footer">
+		
+			<!-- Footer Top -->
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget footer-menu">
+								<h2 class="footer-title">クイックリンク  </h2>
+								<ul>
+									<li>
+										<a href="about-us.html">会社概要</a>
+									</li>
+									<li>
+										<a href="contact-us.html">お問い合わせ</a>
+									</li>
+									<li>
+										<a href="faq.html">よくある質問</a>
+									</li>
+									<li>
+										<a href="#">ヘルプ</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /Footer Widget -->
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget footer-menu">
+								<h2 class="footer-title">カテゴリー</h2>
+								<ul>
+									<li>
+										<a href="search.html">コンピュータ</a>
+									</li>
+									<li>
+										<a href="search.html">内装</a>
+									</li>
+									<li>
+										<a href="search.html">洗車</a>
+									</li>
+									<li>
+										<a href="search.html">掃除</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /Footer Widget -->
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget footer-contact">
+								<h2 class="footer-title">お問い合わせ</h2>
+								<div class="footer-contact-info">
+									<div class="footer-address">
+										<span><i class="far fa-building"></i></span>
+										<p>アメリカ合衆国カリフォルニア州アーバインヒルクレストレーン367</p>
+									</div>
+									<p><i class="fas fa-headphones"></i> 321 546 8764</p>
+									<p class="mb-0"><i class="fas fa-envelope"></i> truelysell@example.com</p>
+								</div>
+							</div>
+							<!-- /Footer Widget -->
+						</div>
+						<div class="col-lg-3 col-md-6">
+							<!-- Footer Widget -->
+							<div class="footer-widget">
+								<h2 class="footer-title">フォローする</h2>
+								<div class="social-icon">
+									<ul>
+										<li>
+											<a href="#" target="_blank"><i class="fab fa-facebook-f"></i> </a>
+										</li>
+										<li>
+											<a href="#" target="_blank"><i class="fab fa-twitter"></i> </a>
+										</li>
+										<li>
+											<a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+										</li>
+										<li>
+											<a href="#" target="_blank"><i class="fab fa-google"></i></a>
+										</li>
+									</ul>
+								</div>
+								<div class="subscribe-form">
+                                    <input type="email" class="form-control" placeholder="メールアドレスを入力してください">
+                                    <button type="submit" class="btn footer-btn">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </button>
+                                </div>
+							</div>
+							<!-- /Footer Widget -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- /Footer Top -->
+			
+			<!-- Footer Bottom -->
+			<div class="footer-bottom">
+				<div class="container">
+					<!-- Copyright -->
+					<div class="copyright">
+						<div class="row">
+							<div class="col-md-6 col-lg-6">
+								<div class="copyright-text">
+									<p class="mb-0">&copy; 2020 <a href="index.html">Truelysell</a>. すべての権利を保有しています。</p>
+								</div>
+							</div>
+							<div class="col-md-6 col-lg-6">
+								<!-- Copyright Menu -->
+								<div class="copyright-menu">
+									<ul class="policy-menu">
+										<li>
+											<a href="term-condition.html">利用規約</a>
+										</li>
+										<li>
+											<a href="privacy-policy.html">プライバシー</a>
+										</li>
+									</ul>
+								</div>
+								<!-- /Copyright Menu -->
+							</div>
+						</div>
+					</div>
+					<!-- /Copyright -->
+				</div>
+			</div>
+			<!-- /Footer Bottom -->
+			
+		</footer>
+		<!-- /Footer -->
+		
+	</div>

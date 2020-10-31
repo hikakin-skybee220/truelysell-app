@@ -13,6 +13,11 @@
 								</a>
 							</div>
 						</div>
+						<% if flash[:notice] %>
+							<div class="form-error flash">
+								<%= flash[:notice] %>
+							</div>
+						<% end %>
 						<div class="login-header">
 							<h3>クライアントログイン <span>Truelysell</span></h3>
 							<p class="text-muted">ダッシュボードにアクセスする</p>

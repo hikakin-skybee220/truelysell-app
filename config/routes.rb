@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get "admin/login" => "admins#login"
   post "admin/login/create" => "admins#create"
   post "admin/create" =>"admins#create"
+  get "providers/add_service" => "providers#add_service"
+  get "providers/my_services" => "providers#my_services"
   post "providers/login" => "providers#login"
   get "providers/login_screen" => "providers#login_screen"
   get 'providers/dashboard' => "providers#dashboard"

@@ -61,7 +61,7 @@ GEM
     autoprefixer-rails (10.0.1.0)
       execjs
     aws-eventstream (1.1.0)
-    aws-partitions (1.385.0)
+    aws-partitions (1.387.0)
     aws-sdk-core (3.109.1)
       aws-eventstream (~> 1, >= 1.0.2)
       aws-partitions (~> 1, >= 1.239.0)
@@ -78,7 +78,7 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     bcrypt (3.1.16)
     bindex (0.8.1)
-    bootsnap (1.4.8)
+    bootsnap (1.4.9)
       msgpack (~> 1.0)
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
